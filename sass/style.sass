@@ -1,0 +1,257 @@
+*
+  box-sizing: border-box
+body
+  font-family: 'Open Sans', sans-serif
+  color: #141515
+h1
+  font-size: 45px
+  line-height: 1
+  font-weight: 700
+  letter-spacing: -1.5px
+a
+  -webkit-text-decoration-skip: objects
+  text-decoration: none
+  &:hover
+    text-decoration: none
+
+.title
+  position: absolute
+  font-size: 38px
+  line-height: 0.9
+  font-weight: 700
+  letter-spacing: -1.5px
+  margin: 0
+  bottom: 25%
+  &:hover
+    text-decoration: underline #ffe132
+.title_left
+  right: -15%
+.title_right
+  left: -15%
+.title_middle
+  left: -15%
+.title_description
+  position: relative
+  color: #beb9c3
+  line-height: 0.9
+  margin: 20px
+  font-weight: 300
+  &::after
+    content: ''
+    position: absolute
+    width: 2px
+    height: 150vh
+    top: 10px
+    left: -20px
+    background: #ebf5f5
+    z-index: -1
+.title_advise
+  font-size: 38px
+  line-height: 0.9
+  font-weight: 700
+  letter-spacing: -1.5px
+.title_cart
+  font-size: 20px
+  font-weight: 700
+  letter-spacing: -1px
+  margin-top: 20px
+  margin-bottom: 0
+
+.uk
+  &-dotnav
+    &>*>*
+      width: 12px
+      height: 12px
+      border: 1px solid #fff
+      background: #fff
+    &>.uk-active>*
+      background-color: #beb9c3
+      border-color: transparent
+
+.uk-subnav-pill>*>:first-child
+  padding: 8px 15px
+  background: #ebf5f5
+  color: #3c3741
+  font-weight: 600
+.uk-subnav-pill>*>a:focus,
+.uk-subnav-pill>*>a:hover
+  background-color: #3c3741
+  color: #fff
+.uk-subnav-pill>.uk-active>a
+  background-color: #3c3741
+  color: #fff
+  font-weight: 600
+ul.uk-subnav.uk-subnav-pill
+  width: 475px
+  margin: 60px auto
+
+.uk-transition-toggle:hover .uk-transition-scale-up
+  opacity: 1
+  transform: scale3d(1.03,1.03,1)
+
+.header
+  height: 60vh
+  max-height: 600px
+  background: #ebf5f5
+  & .uk-container
+    height: 100vh
+    max-height: 600px
+  & .uk-position-center
+    width: 100%
+    padding: 0 40px
+    margin: auto
+    transform: translate(-50%, -50%)
+  &-top
+    padding: 20px
+    width: 100%
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 2
+    font-weight: 600
+    &__menu
+      & a
+        display: flex
+        align-items: center
+        color: #141515
+      & svg rect
+        height: 2px
+      & span
+        float: left
+      & div
+        font-family: 'Open Sans'
+        float: 
+        margin: 0 10px
+    &__phone
+      & svg path
+        stroke-width: 2
+      & svg polyline
+        stroke-width: 2
+      & span
+        float: left
+      & div
+        float: left
+        margin: 0 10px
+  &__logo
+    margin-top: 40px
+  & p
+    font-size: 18px
+    line-height: 1.2
+    margin-top: 35px
+  &__catalog
+    font-weight: 600
+    color: #141515
+    margin-top: 30px
+    display: inline-block
+    &:hover
+      color: #ffe132
+    & svg polyline
+      stroke-width: 2
+
+.slider
+  background-blend-mode: multiply
+  background-repeat: no-repeat !important
+  background-size: contain !important
+  min-height: 340px
+  margin: 0 auto
+  &-nav
+    position: absolute
+    top: 30%
+    right: 50px
+    display: inline-block
+
+.catalog
+  position: relative
+  padding: 10vh 0
+  &::after
+    content: ''
+    position: absolute
+    width: 100vw
+    height: 10vh
+    bottom: 0vh
+    left: 0
+    background: #fff
+    z-index: -1
+    border-top: 2px solid #ebf5f5
+  &-row
+    display: flex
+    flex-wrap: wrap
+    align-content: space-around
+    &__right
+      margin-left: 30%
+  &-block
+    display: inline-block
+    position: relative
+    padding: 10px
+    margin-bottom: 10vh
+  &-left
+    &::after
+      content: ''
+      position: absolute
+      width: 90px
+      height: 180px
+      top: 0
+      left: 0
+      background: #ffe132
+      z-index: -1
+  &-right
+    &::after
+      content: ''
+      position: absolute
+      width: 90px
+      height: 180px
+      top: 0
+      right: 0
+      background: #ffe132
+      z-index: -1
+  &-middle
+    &::after
+      content: ''
+      position: absolute
+      width: 90px
+      height: 180px
+      top: 0
+      right: 0
+      background: #ffe132
+      z-index: -1
+
+.button
+  display: table
+  height: 50px
+  line-height: 48px
+  font-weight: 600
+  border: 2px solid #ffe132
+  border-radius: 40px
+  background: #ffe132
+  padding: 0 30 !important
+  box-shadow: 0 10px 40px rgba(255, 225, 50, 0.6)
+  margin: 0 auto -25px !important
+  &:hover
+    background: transparent
+    border: 2px solid #ffe132
+
+.advise
+  padding: 10vh 0
+    &__block
+      display: block
+      border: 2px solid #ebf5f5
+      padding: 35px 10px
+      color: #141515
+    &__price
+      display: table
+      position: relative
+      font-size: 20px
+      font-weight: 700
+      letter-spacing: -1px
+      margin-left: -10px
+      padding-left: 15px
+      &::after
+        content: ''
+        position: absolute
+        width: 55%
+        height: 100%
+        left: 0
+        top: 0
+        background: #ffe132
+        z-index: -1
+    &__image
