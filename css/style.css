@@ -128,7 +128,7 @@ ul.uk-subnav.uk-subnav-pill {
 }
 
 .header {
-  height: 60vh;
+  height: 80vh;
   max-height: 600px;
   background: #ebf5f5;
 }
@@ -229,7 +229,6 @@ ul.uk-subnav.uk-subnav-pill {
   background-repeat: no-repeat !important;
   -webkit-background-size: contain !important;
           background-size: contain !important;
-  min-height: 340px;
   margin: 0 auto;
 }
 
@@ -338,24 +337,14 @@ ul.uk-subnav.uk-subnav-pill {
   padding: 10vh 0;
 }
 
-.advise-cart {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
-}
-
-.advise-cart__block {
+.advise__block {
   display: block;
   border: 2px solid #ebf5f5;
   padding: 35px 10px;
   color: #141515;
 }
 
-.advise-cart__price {
+.advise__price {
   display: table;
   position: relative;
   font-size: 20px;
@@ -365,7 +354,7 @@ ul.uk-subnav.uk-subnav-pill {
   padding-left: 15px;
 }
 
-.advise-cart__price::after {
+.advise__price::after {
   content: '';
   position: absolute;
   width: 55%;
