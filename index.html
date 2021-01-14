@@ -18,22 +18,29 @@
   <section id="header-top" class="header-top">
     <div class="uk-container-expand">
       <div class="uk-float-left header-top__menu">
-        <a href="#header-top__menu-dropdown" uk-toggle="target: #header-top__menu-dropdown">
+        <a href="#header-top__menu-offcanvas" uk-toggle="target: #header-top__menu-offcanvas">
           <span uk-icon="icon: menu"></span>
           <div>Меню</div>
         </a>
       </div>
-      <div class="uk-float-right header-top__phone">
+      <div class="uk-float-right uk-flex header-top__phone">
         <div uk-icon="receiver"></div>
-        <div>8 800 500 00 00</div>
+        <a href="tel:88005000000" target="_blank">8 800 500 00 00</a>
         <span uk-icon="icon: chevron-down"></span>
+        <div uk-drop="offset: 10">
+          <div class="uk-card uk-card-default uk-card-body uk-card-small header-top__card">
+            <a href="tel:88005000000" target="_blank" class="header-top__card-phone">8 800 500 00 00</a>
+            <p>Санкт-Петербург, проспект Обуховской обороны, 116, ТЦ Нева, эт. 2</p>
+            <a href="#callback" class="uk-button uk-button-default button">Обратный звонок</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
   <!-- Header Top end-->
 
   <!-- Header-->
-  <header class="header">
+  <header id="header" class="header">
     <div class="uk-container uk-position-relative">
       <div class="header__logo">
         <a href="#">
@@ -42,7 +49,7 @@
       </div>
 
       <div class="uk-position-center">
-        <div uk-slider>
+        <div uk-slider="autoplay: true; autoplay-interval: 4000; pause-on-hover: true; animation: fade">
           <div class="uk-slider-container">
             <ul class="uk-slider-items uk-child-width-1-1" id="headerSlider" class="header__slider">
 
@@ -61,7 +68,7 @@
 
               <li class="uk-flex uk-flex-wrap uk-flex-wrap-around">
                 <div class="uk-width-1-4\@m uk-width-1-4">
-                  <h1>Мебель - <br>с элементами <br>комфорта2!</h1>
+                  <h1>Мебель - <br>с элементами <br>комфорта</h1>
                   <p>Мы изготавливаем мягкую <br>и корпусную мебель.</p>
                   <a href="#catalog" class="header__catalog">Каталог
                     <span uk-icon="icon: chevron-down"></span>
@@ -79,17 +86,6 @@
             <ul class="uk-slider-nav uk-dotnav uk-dotnav-vertical"></ul>
           </div>
 
-          <!-- Another option for "slider-nav" -->
-          <!-- <div class="uk-hidden\@s uk-light">
-            <a href="#" class="uk-position-center-left uk-position-small" uk-slidenav-previous uk-slider-item="previous"></a>
-            <a href="#" class="uk-position-center-right uk-position-small" uk-slidenav-next uk-slider-item="next"></a>
-          </div>
-
-          <div class="uk-visible\@s">
-            <a href="#" class="uk-position-center-left-out uk-position-small" uk-slidenav-previous uk-slider-item="previous"></a>
-            <a href="#" class="uk-position-center-right-out uk-position-small" uk-slidenav-next uk-slider-item="next"></a>
-          </div> -->
-
         </div>
 
       </div>
@@ -101,10 +97,10 @@
   <!-- Catalog -->
   <section id="catalog" class="catalog uk-overflow-hidden">
     <div class="uk-container">
-      <div class="catalog-row">
-        <div class="catalog-block">
-          <a href="#" class="uk-transition-toggle catalog-left" tabindex="0">
-            <img class="uk-transition-scale-up uk-transition-opaque" src="images/cat1.png" alt="">
+      <div class="uk-flex uk-flex-wrap uk-flex-wrap-around">
+        <div class="uk-width-auto\@m uk-width-1-2 catalog-block">
+          <a href="#advise" class="uk-transition-toggle catalog-left" data-tab="0" tabindex="0" uk-scroll>
+            <img class="uk-transition-scale-up uk-transition-opaque" src="images/catalog/cat1.png">
             <h2 class="title title_left">Кухни <br>и столешницы</h2>
           </a>
         </div>
@@ -114,35 +110,33 @@
         </div>
       </div>
 
-      <div class="catalog-row catalog-row__right">
+      <div class="uk-flex uk-flex-wrap uk-flex-wrap-around uk-flex-right">
         <div>
           <h3 class="title_description">Эргономика <br>и практичность</h3>
         </div>
 
-        <div class="catalog-block">
-          <a href="#" class="uk-transition-toggle catalog-right" tabindex="0">
-            <img class="uk-transition-scale-up uk-transition-opaque" src="images/cat2.png" alt="">
+        <div class="uk-width-auto\@m uk-width-1-2 catalog-block">
+          <a href="#advise" class="uk-transition-toggle catalog-right" data-tab="1" tabindex="0" uk-scroll>
+            <img class="uk-transition-scale-up uk-transition-opaque" src="images/catalog/cat2.png">
             <h2 class="title title_right">Шкафы <br>и стеллажи</h2>
           </a>
         </div>
       </div>
 
-      <div class="catalog-row">
+      <div class="uk-flex uk-flex-wrap uk-flex-wrap-around">
         <div>
           <h3 class="title_description">Комфорт <br>и эстетика</h3>
         </div>
 
-        <div class="catalog-block catalog-block__middle">
-          <a href="#" class="uk-transition-toggle catalog-middle" tabindex="0">
-            <img class="uk-transition-scale-up uk-transition-opaque" src="images/cat3.png" alt="">
-            <h2 class="title title_middle">Мягкая мебель <br>и кровати</h2>
+        <div class="uk-float-left catalog-block">
+          <a href="#advise" class="uk-transition-toggle catalog-right" data-tab="2" tabindex="0" uk-scroll>
+            <img class="uk-transition-scale-up uk-transition-opaque" src="images/catalog/cat3.png">
+            <h2 class="title title_right">Мягкая мебель <br>и кровати</h2>
           </a>
         </div>
       </div>
 
-      <a href="#" class="uk-button uk-button-default button">
-        Скачать каталог
-      </a>
+      <a href="#" class="uk-button uk-button-default button">Скачать каталог</a>
 
     </div>
   </section>
@@ -152,58 +146,160 @@
   <section id="advise" class="advise">
     <div class="uk-container">
       <h2 class="title_advise uk-text-center">Рекомендуем</h2>
-      <ul class="uk-subnav uk-subnav-pill advise-nav" uk-switcher="animation: uk-animation-fade">
+      <ul id="catalog-list" class="uk-subnav uk-subnav-pill advise-nav" uk-switcher="animation: uk-animation-fade">
         <li><a href="#">Кухни</a></li>
         <li><a href="#">Шкафы</a></li>
         <li><a href="#">Кровати</a></li>
         <li><a href="#">Диваны</a></li>
       </ul>
 
-      <ul class="uk-switcher uk-margin">
+      <ul class="uk-switcher uk-margin catalog-list">
         <li>
-          <div class="advise-slider" uk-slider>
+          <div class="advise-slider" uk-slider="animation: fade">
 
             <div class="uk-position-relative">
 
               <div class="uk-slider-container advise-slider__container">
 
-                <ul class="uk-slider-items uk-child-width-1-3 uk-child-width-1-3\@m uk-grid uk-text-center">
+                <ul class="uk-slider-items uk-child-width-1-4 uk-child-width-1-4\@m uk-grid uk-text-center">
                   <li class="advise-cart">
-                    <a href="#" class="advise-cart__block uk-panel">
+                    <a href="item.html" class="advise-cart__block uk-panel">
                       <div class="advise-cart__price">15 990 руб.</div>
-                      <img class="advise-cart__image" src="images/tovar1.png" alt="">
+                      <img src="images/advise/item1.png">
                       <h4 class="title_cart">Диван Атланта</h4>
                       <p>155x75 / 200x70</p>
-                      <span class="uk-button uk-button-default">Подробнее</span>
+                      <span class="uk-button uk-button-default button">Подробнее</span>
                     </a>
                   </li>
                   <li class="advise-cart">
-                    <a href="#" class="advise-cart__block uk-panel">
+                    <a href="item2.html" class="advise-cart__block uk-panel">
                       <div class="advise-cart__price">14 990 руб.</div>
-                      <img src="images/tovar2.png" alt="">
+                      <img src="images/advise/item2.png">
                       <h4 class="title_cart">Диван Мадрид</h4>
                       <p>200x90 / 200x140</p>
-                      <span class="uk-button uk-button-default">Подробнее</span>
+                      <span class="uk-button uk-button-default button">Подробнее</span>
                     </a>
                   </li>
                   <li class="advise-cart">
-                    <a href="#" class="advise-cart__block uk-panel">
+                    <a href="item3.html" class="advise-cart__block uk-panel">
                       <div class="advise-cart__price">12 990 руб.</div>
-                      <img src="images/tovar3.png" alt="">
+                      <img src="images/advise/item3.png">
                       <h4 class="title_cart">Диван Лион</h4>
                       <p>165x100 / 200x130</p>
-                      <span class="uk-button uk-button-default">Подробнее</span>
+                      <span class="uk-button uk-button-default button">Подробнее</span>
+                    </a>
+                  </li>
+                  <li class="advise-cart">
+                    <a href="item.html" class="advise-cart__block uk-panel">
+                      <div class="advise-cart__price">15 990 руб.</div>
+                      <img src="images/advise/item1.png">
+                      <h4 class="title_cart">Диван Атланта</h4>
+                      <p>155x75 / 200x70</p>
+                      <span class="uk-button uk-button-default button">Подробнее</span>
+                    </a>
+                  </li>
+                  <li class="advise-cart">
+                    <a href="item2.html" class="advise-cart__block uk-panel">
+                      <div class="advise-cart__price">14 990 руб.</div>
+                      <img src="images/advise/item2.png">
+                      <h4 class="title_cart">Диван Мадрид</h4>
+                      <p>200x90 / 200x140</p>
+                      <span class="uk-button uk-button-default button">Подробнее</span>
+                    </a>
+                  </li>
+                  <li class="advise-cart">
+                    <a href="item3.html" class="advise-cart__block uk-panel">
+                      <div class="advise-cart__price">12 990 руб.</div>
+                      <img src="images/advise/item3.png">
+                      <h4 class="title_cart">Диван Лион</h4>
+                      <p>165x100 / 200x130</p>
+                      <span class="uk-button uk-button-default button">Подробнее</span>
                     </a>
                   </li>
                 </ul>
 
               </div>
 
-              <div class="uk-hidden\@s uk-light">
-                <a href="#" class="uk-position-center-left uk-position-small uk-hidden-hover" uk-slidenav-previous
+              <div class="uk-visible\@s">
+                <a href="#" class="uk-position-center-left-out uk-position-small uk-hidden-hover" uk-slidenav-previous
                   uk-slider-item="previous"></a>
-                <a href="#" class="uk-position-center-right uk-position-small uk-hidden-hover" uk-slidenav-next
+                <a href="#" class="uk-position-center-right-out uk-position-small uk-hidden-hover" uk-slidenav-next
                   uk-slider-item="next"></a>
+              </div>
+
+            </div>
+
+            <ul class="uk-slider-nav uk-dotnav uk-flex-center">
+
+            </ul>
+
+          </div>
+        </li>
+
+        <li>
+          <div class="advise-slider" uk-slider="animation: fade">
+
+            <div class="uk-position-relative">
+
+              <div class="uk-slider-container advise-slider__container">
+
+                <ul class="uk-slider-items uk-child-width-1-4 uk-child-width-1-4\@m uk-grid uk-text-center">
+                  <li class="advise-cart">
+                    <a href="item.html" class="advise-cart__block uk-panel">
+                      <div class="advise-cart__price">15 990 руб.</div>
+                      <img src="images/advise/item1.png">
+                      <h4 class="title_cart">Диван Атланта</h4>
+                      <p>155x75 / 200x70</p>
+                      <span class="uk-button uk-button-default button">Подробнее</span>
+                    </a>
+                  </li>
+                  <li class="advise-cart">
+                    <a href="item2.html" class="advise-cart__block uk-panel">
+                      <div class="advise-cart__price">14 990 руб.</div>
+                      <img src="images/advise/item2.png">
+                      <h4 class="title_cart">Диван Мадрид</h4>
+                      <p>200x90 / 200x140</p>
+                      <span class="uk-button uk-button-default button">Подробнее</span>
+                    </a>
+                  </li>
+                  <li class="advise-cart">
+                    <a href="item3.html" class="advise-cart__block uk-panel">
+                      <div class="advise-cart__price">12 990 руб.</div>
+                      <img src="images/advise/item3.png">
+                      <h4 class="title_cart">Диван Лион</h4>
+                      <p>165x100 / 200x130</p>
+                      <span class="uk-button uk-button-default button">Подробнее</span>
+                    </a>
+                  </li>
+                  <li class="advise-cart">
+                    <a href="item.html" class="advise-cart__block uk-panel">
+                      <div class="advise-cart__price">15 990 руб.</div>
+                      <img src="images/advise/item1.png">
+                      <h4 class="title_cart">Диван Атланта</h4>
+                      <p>155x75 / 200x70</p>
+                      <span class="uk-button uk-button-default button">Подробнее</span>
+                    </a>
+                  </li>
+                  <li class="advise-cart">
+                    <a href="item2.html" class="advise-cart__block uk-panel">
+                      <div class="advise-cart__price">14 990 руб.</div>
+                      <img src="images/advise/item2.png">
+                      <h4 class="title_cart">Диван Мадрид</h4>
+                      <p>200x90 / 200x140</p>
+                      <span class="uk-button uk-button-default button">Подробнее</span>
+                    </a>
+                  </li>
+                  <li class="advise-cart">
+                    <a href="item3.html" class="advise-cart__block uk-panel">
+                      <div class="advise-cart__price">12 990 руб.</div>
+                      <img src="images/advise/item3.png">
+                      <h4 class="title_cart">Диван Лион</h4>
+                      <p>165x100 / 200x130</p>
+                      <span class="uk-button uk-button-default button">Подробнее</span>
+                    </a>
+                  </li>
+                </ul>
+
               </div>
 
               <div class="uk-visible\@s">
@@ -221,10 +317,166 @@
 
           </div>
         </li>
+        <li>
+          <div class="advise-slider" uk-slider="animation: fade">
 
-        <li>Hello again!</li>
-        <li>Hello!</li>
-        <li>Barunga!</li>
+            <div class="uk-position-relative">
+
+              <div class="uk-slider-container advise-slider__container">
+
+                <ul class="uk-slider-items uk-child-width-1-4 uk-child-width-1-4\@m uk-grid uk-text-center">
+                  <li class="advise-cart">
+                    <a href="item.html" class="advise-cart__block uk-panel">
+                      <div class="advise-cart__price">15 990 руб.</div>
+                      <img src="images/advise/item1.png">
+                      <h4 class="title_cart">Диван Атланта</h4>
+                      <p>155x75 / 200x70</p>
+                      <span class="uk-button uk-button-default button">Подробнее</span>
+                    </a>
+                  </li>
+                  <li class="advise-cart">
+                    <a href="item2.html" class="advise-cart__block uk-panel">
+                      <div class="advise-cart__price">14 990 руб.</div>
+                      <img src="images/advise/item2.png">
+                      <h4 class="title_cart">Диван Мадрид</h4>
+                      <p>200x90 / 200x140</p>
+                      <span class="uk-button uk-button-default button">Подробнее</span>
+                    </a>
+                  </li>
+                  <li class="advise-cart">
+                    <a href="item3.html" class="advise-cart__block uk-panel">
+                      <div class="advise-cart__price">12 990 руб.</div>
+                      <img src="images/advise/item3.png">
+                      <h4 class="title_cart">Диван Лион</h4>
+                      <p>165x100 / 200x130</p>
+                      <span class="uk-button uk-button-default button">Подробнее</span>
+                    </a>
+                  </li>
+                  <li class="advise-cart">
+                    <a href="item.html" class="advise-cart__block uk-panel">
+                      <div class="advise-cart__price">15 990 руб.</div>
+                      <img src="images/advise/item1.png">
+                      <h4 class="title_cart">Диван Атланта</h4>
+                      <p>155x75 / 200x70</p>
+                      <span class="uk-button uk-button-default button">Подробнее</span>
+                    </a>
+                  </li>
+                  <li class="advise-cart">
+                    <a href="item2.html" class="advise-cart__block uk-panel">
+                      <div class="advise-cart__price">14 990 руб.</div>
+                      <img src="images/advise/item2.png">
+                      <h4 class="title_cart">Диван Мадрид</h4>
+                      <p>200x90 / 200x140</p>
+                      <span class="uk-button uk-button-default button">Подробнее</span>
+                    </a>
+                  </li>
+                  <li class="advise-cart">
+                    <a href="item3.html" class="advise-cart__block uk-panel">
+                      <div class="advise-cart__price">12 990 руб.</div>
+                      <img src="images/advise/item3.png">
+                      <h4 class="title_cart">Диван Лион</h4>
+                      <p>165x100 / 200x130</p>
+                      <span class="uk-button uk-button-default button">Подробнее</span>
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+
+              <div class="uk-visible\@s">
+                <a href="#" class="uk-position-center-left-out uk-position-small uk-hidden-hover" uk-slidenav-previous
+                  uk-slider-item="previous"></a>
+                <a href="#" class="uk-position-center-right-out uk-position-small uk-hidden-hover" uk-slidenav-next
+                  uk-slider-item="next"></a>
+              </div>
+
+            </div>
+
+            <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin">
+
+            </ul>
+
+          </div>
+        </li>
+        <li>
+          <div class="advise-slider" uk-slider="animation: fade">
+
+            <div class="uk-position-relative">
+
+              <div class="uk-slider-container advise-slider__container">
+
+                <ul class="uk-slider-items uk-child-width-1-4 uk-child-width-1-4\@m uk-grid uk-text-center">
+                  <li class="advise-cart">
+                    <a href="item.html" class="advise-cart__block uk-panel">
+                      <div class="advise-cart__price">15 990 руб.</div>
+                      <img src="images/advise/item1.png">
+                      <h4 class="title_cart">Диван Атланта</h4>
+                      <p>155x75 / 200x70</p>
+                      <span class="uk-button uk-button-default button">Подробнее</span>
+                    </a>
+                  </li>
+                  <li class="advise-cart">
+                    <a href="item2.html" class="advise-cart__block uk-panel">
+                      <div class="advise-cart__price">14 990 руб.</div>
+                      <img src="images/advise/item2.png">
+                      <h4 class="title_cart">Диван Мадрид</h4>
+                      <p>200x90 / 200x140</p>
+                      <span class="uk-button uk-button-default button">Подробнее</span>
+                    </a>
+                  </li>
+                  <li class="advise-cart">
+                    <a href="item3.html" class="advise-cart__block uk-panel">
+                      <div class="advise-cart__price">12 990 руб.</div>
+                      <img src="images/advise/item3.png">
+                      <h4 class="title_cart">Диван Лион</h4>
+                      <p>165x100 / 200x130</p>
+                      <span class="uk-button uk-button-default button">Подробнее</span>
+                    </a>
+                  </li>
+                  <li class="advise-cart">
+                    <a href="item.html" class="advise-cart__block uk-panel">
+                      <div class="advise-cart__price">15 990 руб.</div>
+                      <img src="images/advise/item1.png">
+                      <h4 class="title_cart">Диван Атланта</h4>
+                      <p>155x75 / 200x70</p>
+                      <span class="uk-button uk-button-default button">Подробнее</span>
+                    </a>
+                  </li>
+                  <li class="advise-cart">
+                    <a href="item2.html" class="advise-cart__block uk-panel">
+                      <div class="advise-cart__price">14 990 руб.</div>
+                      <img src="images/advise/item2.png">
+                      <h4 class="title_cart">Диван Мадрид</h4>
+                      <p>200x90 / 200x140</p>
+                      <span class="uk-button uk-button-default button">Подробнее</span>
+                    </a>
+                  </li>
+                  <li class="advise-cart">
+                    <a href="item3.html" class="advise-cart__block uk-panel">
+                      <div class="advise-cart__price">12 990 руб.</div>
+                      <img src="images/advise/item3.png">
+                      <h4 class="title_cart">Диван Лион</h4>
+                      <p>165x100 / 200x130</p>
+                      <span class="uk-button uk-button-default button">Подробнее</span>
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+
+                <a href="#" class="uk-position-center-left uk-position-small" uk-slidenav-previous
+                  uk-slider-item="previous"></a>
+                <a href="#" class="uk-position-center-right uk-position-small" uk-slidenav-next
+                  uk-slider-item="next"></a>
+
+            </div>
+
+            <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin">
+
+            </ul>
+
+          </div>
+        </li>
       </ul>
 
 
@@ -232,11 +484,132 @@
   </section>
   <!-- Advise end -->
 
-  <div id="header-top__menu-dropdown" uk-offcanvas="overlay: true">
+  <!-- News -->
+  <section id="news" class="news uk-position-relative">
+    <div class="uk-container news-container">
+      <div class="uk-flex uk-flex-wrap uk-flex-wrap-around news-wrap">
+        <div class="uk-width-1-2\@m uk-width-1-1 uk-position-relative news-wrap__el">
+          <div class="uk-position-center-left news-block">
+            <span class="advise-cart__price">новинка</span>
+            <h2 class="title_advise">Новая коллекция <br>декоров</h2>
+            <p>В производстве корпусной мебели <br>мы используем декоры ведущих <br>производителей.</p>
+            <a href="#" class="uk-button uk-button-default button news-block__button">Индивидуальный дизайн</a>
+          </div>
+        </div>
+        <div class="uk-width-1-2\@m uk-width-1-1">  
+        </div>
+      </div>
+
+      <div uk-slideshow="min-height: 600; max-height: 600" class="news-gallery">
+        <div class="uk-position-relative uk-visible-toggle" tabindex="-1">
+            <ul class="uk-slideshow-items">
+                <li>
+                    <img src="images/gallery/gal1.png" uk-cover>
+                </li>
+                <li>
+                    <img src="images/gallery/gal2.png" uk-cover>
+                </li>
+                <li>
+                    <img src="images/gallery/gal3.png" uk-cover>
+                </li>
+            </ul>
+    
+            <div class="news-gallery__nav">
+              <a href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+            <a href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+            </div>
+    
+        </div>    
+      </div>
+    </div>
+  </section>
+  <!-- News end -->
+
+  <!-- Brands -->
+  <section id="brands" class="brands">
+    <div class="uk-container">
+      <div uk-slider="autoplay: true; autoplay-interval: 3000; pause-on-hover: true; animation: fade">
+        <div class="uk-position-relative">
+          <div class="uk-slider-container">
+            <ul class="uk-slider-items uk-child-width-1-4 uk-child-width-1-4\@m uk-grid uk-text-center">
+              <li><img src="images/brands/brand1.png"></li>
+              <li><img src="images/brands/brand2.png"></li>
+              <li><img src="images/brands/brand3.png"></li>
+              <li><img src="images/brands/brand4.png"></li>
+              <li><img src="images/brands/brand1.png"></li>
+              <li><img src="images/brands/brand2.png"></li>
+              <li><img src="images/brands/brand3.png"></li>
+              <li><img src="images/brands/brand4.png"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Brands end -->
+
+  <!-- Footer -->
+  <footer id="footer" class="footer">
+    <div class="uk-container">
+      <div class="uk-flex uk-flex-wrap uk-flex-wrap-around">
+        <div class="uk-width-1-3\@m uk-width-1-3 footer-author">
+          <a href="#">Алина Муграби, 2021</a>
+        </div>
+        <div class="uk-width-1-3\@m uk-width-1-3 footer-contacts">
+          <a href="tel:88005000000" target="_blank" class="footer-contacts__phone">8 800 500 00 00</a>
+          <a href="#callback" class="uk-button uk-button-default button" uk-toggle="#callback">Обратный звонок</a>
+        </div>
+        <div class="footer-dev">
+          <a href="https://star-like.ru" target="_blank">Дизайн - Старлайк</a>
+          <a href="#" target="_blank">Версткв - Алина Муграби</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer end -->
+
+  <!-- Menu Offcanvas -->
+  <div id="header-top__menu-offcanvas" class="header-top__menu-offcanvas" uk-offcanvas="mode: slide; overlay: true">
     <div class="uk-offcanvas-bar">
       <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+      <ul>
+        <li class="uk-list"><a href="#header" uk-scroll>Главная</a></li>
+        <li class="uk-list"><a href="#catalog" uk-scroll>Каталог</a></li>
+        <li class="uk-list"><a href="#advise" uk-scroll>Рекомендуем</a></li>
+        <li class="uk-list"><a href="#brands" uk-scroll>Новинки</a></li>
+        <li class="uk-list"><a href="#footer" uk-scroll>Контакты</a></li>
+      </ul>
     </div>
   </div>
+  <!-- Menu Offcanvas end -->
+
+  <!-- Callback -->
+  <div id="callback" class="footer-callback" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical footer-callback__block">
+      <button class="uk-modal-close-default" type="button" uk-close></button>
+      <h3 class="title_callback">Обратный звонок</h3>
+      <form action="#" method="post">
+        <div class="uk-margin">
+          <input class="uk-input uk-form-width-large" type="text" name="name" placeholder="Ваше имя">
+        </div>
+        <div class="uk-margin">
+          <input class="uk-input uk-form-width-large" type="numbers" name="phone" placeholder="+7 (000) 000 00 00">
+        </div>
+        <button class="uk-button uk-button-default button">Жду звонка</button>
+      </form>
+    </div>
+  </div>
+  <!-- Callback end -->
+
+  <!-- Item -->
+  <div id="item" class="uk-flex-top item" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+      <button class="uk-modal-close-default" type="button" uk-close></button>
+      <div id="result"></div>
+    </div>
+  </div>
+  <!-- Item end -->
 
 </body>
 
