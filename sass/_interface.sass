@@ -1,0 +1,113 @@
+*
+  box-sizing: border-box
+body
+  font-family: 'Open Sans', sans-serif
+  color: #141515
+h1
+  font-size: 45px
+  line-height: 1
+  font-weight: 700
+  letter-spacing: -1.5px
+
+a
+  -webkit-text-decoration-skip: objects
+  text-decoration: none
+  &:hover
+    text-decoration: none
+  &.uk-slidenav
+    background: transparent
+    color: #beb9c3
+    & svg polyline
+      stroke-width: 2
+
+ul.uk-subnav.uk-subnav-pill
+  width: 475px
+  margin: 30px auto
+
+.title
+  font-size: 38px
+  line-height: 0.9
+  font-weight: 700
+  letter-spacing: -1.5px
+.title_catalog
+  position: absolute
+  bottom: 25%
+  margin: 0
+  &:hover
+    text-decoration: underline #ffe132
+.title_left
+  right: -15%
+.title_right
+  left: -15%
+.title_description
+  position: relative
+  color: #beb9c3
+  line-height: 0.9
+  margin: 20px
+  font-weight: 300
+  &::after
+    content: ''
+    position: absolute
+    width: 2px
+    height: 150vh
+    top: 10px
+    left: -20px
+    background: #ebf5f5
+    z-index: -1
+.title_advise
+  font-size: 38px
+  line-height: 0.9
+  font-weight: 700
+  letter-spacing: -1.5px
+  margin-top: 60px
+.title_cart
+  font-size: 20px
+  font-weight: 700
+  letter-spacing: -1px
+  margin-top: 20px
+  margin-bottom: 0
+.title_callback
+  font-weight: 700
+
+.button
+  display: table
+  height: 50px
+  line-height: 48px
+  font-weight: 600
+  border: 2px solid #ffe132
+  border-radius: 40px
+  background: #ffe132
+  padding: 0 30px !important
+  box-shadow: 0 10px 40px rgba(255, 225, 50, 0.6)
+  &:hover
+    background: transparent
+    border: 2px solid #ffe132
+
+.uk
+  &-dotnav
+    &>*>*
+      width: 12px
+      height: 12px
+      border: 1px solid #fff
+      background: #fff
+    &>.uk-active>*
+      background-color: #beb9c3
+      border-color: transparent
+  &-subnav-pill
+    &>*>:first-child
+      padding: 8px 15px
+      background: #ebf5f5
+      color: #3c3741
+      font-weight: 600
+    &>*>a:focus,
+    &>*>a:hover
+      background-color: #3c3741
+      color: #fff
+    &>.uk-active>a
+      background-color: #3c3741
+      color: #fff
+      font-weight: 600
+  &-transition-toggle:hover
+  &-transition-scale-up
+    opacity: 1
+    transform: scale3d(1.03,1.03,1)

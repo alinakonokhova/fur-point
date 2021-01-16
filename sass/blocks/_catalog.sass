@@ -1,0 +1,40 @@
+.catalog
+  position: relative
+  padding: 10vh 0
+  &::after
+    content: ''
+    position: absolute
+    width: 100vw
+    height: 10vh
+    bottom: 0vh
+    left: 0
+    background: #fff
+    z-index: -1
+    border-top: 2px solid #ebf5f5
+  &-block
+    display: inline-block
+    position: relative
+    padding: 10px
+    margin-bottom: 10vh
+  &-left
+    &::after
+      content: ''
+      position: absolute
+      width: 90px
+      height: 180px
+      top: 0
+      left: 0
+      background: #ffe132
+      z-index: -1
+  &-right
+    &::after
+      content: ''
+      position: absolute
+      width: 90px
+      height: 180px
+      top: 0
+      right: 0
+      background: #ffe132
+      z-index: -1
+  & .button
+    margin: 0 auto -25px

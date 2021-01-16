@@ -1,0 +1,96 @@
+.header
+  height: 80vh
+  max-height: 600px
+  background: #ebf5f5
+  & .uk-container
+    height: 100vh
+    max-height: 600px
+  & .uk-position-center
+    width: 100%
+    padding: 0 40px
+    margin: auto
+    transform: translate(-50%, -50%)
+  &-top
+    padding: 20px
+    width: 100%
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 2
+    font-weight: 600
+    &__menu
+      & a
+        display: flex
+        align-items: center
+        color: #141515
+      & svg rect
+        height: 2px
+      & span
+        float: left
+      & div
+        font-family: 'Open Sans'
+        float: 
+        margin: 0 10px
+      &-offcanvas
+        & div
+          background: #ffe132
+        & button.uk-close.uk-icon
+          color: #3c3741
+          & svg line
+            stroke-width: 2
+        & ul
+          margin-top: 10vh
+        & li a
+          font-size: 24px
+          letter-spacing: -0.5px
+          font-weight: 700
+          color: #3c3741
+    &__phone
+      & svg path
+        stroke-width: 2
+      & svg polyline
+        stroke-width: 2
+      & span
+        float: left
+        margin-left: 2px
+      & div
+        float: left
+        margin: 0 10px
+      & a
+        color: #3c3741
+    &__card
+      text-align: center
+      &-phone
+        font-size: 24px
+        margin-bottom: 15px
+        &:hover
+          text-decoration: none
+          color: #ffe132
+      & a.button
+        margin: 0 auto
+  &__logo
+    margin-top: 40px
+  & p, .news-block p
+    font-size: 18px
+    line-height: 1.2
+    margin-top: 35px
+  &__catalog
+    font-weight: 600
+    color: #141515
+    margin-top: 30px
+    display: inline-block
+    &:hover
+      color: #ffe132
+    & svg polyline
+      stroke-width: 2
+
+.slider
+  background-blend-mode: multiply
+  background-repeat: no-repeat !important
+  background-size: contain !important
+  margin: 0 auto
+  &-nav
+    position: absolute
+    top: 30%
+    right: 50px
+    display: inline-block
