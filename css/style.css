@@ -39,16 +39,19 @@ ul.uk-subnav.uk-subnav-pill {
 }
 
 .title {
-  position: absolute;
   font-size: 38px;
   line-height: 0.9;
   font-weight: 700;
   letter-spacing: -1.5px;
-  margin: 0;
-  bottom: 25%;
 }
 
-.title:hover {
+.title_catalog {
+  position: absolute;
+  bottom: 25%;
+  margin: 0;
+}
+
+.title_catalog:hover {
   -webkit-text-decoration: underline #ffe132;
           text-decoration: underline #ffe132;
 }
@@ -112,7 +115,6 @@ ul.uk-subnav.uk-subnav-pill {
   padding: 0 30px !important;
   -webkit-box-shadow: 0 10px 40px rgba(255, 225, 50, 0.6);
           box-shadow: 0 10px 40px rgba(255, 225, 50, 0.6);
-  margin: 0 auto -25px !important;
 }
 
 .button:hover {
@@ -272,7 +274,7 @@ ul.uk-subnav.uk-subnav-pill {
 }
 
 .header-top__card a.button {
-  margin: 0 auto !important;
+  margin: 0 auto;
 }
 
 .header__logo {
@@ -359,6 +361,10 @@ ul.uk-subnav.uk-subnav-pill {
   right: 0;
   background: #ffe132;
   z-index: -1;
+}
+
+.catalog .button {
+  margin: 0 auto -25px;
 }
 
 .advise-slider__container {
@@ -468,7 +474,7 @@ ul.uk-subnav.uk-subnav-pill {
   border: 2px solid #3c3741;
   -webkit-box-shadow: 0 10px 40px rgba(60, 55, 65, 0.6);
           box-shadow: 0 10px 40px rgba(60, 55, 65, 0.6);
-  margin: 35px 0 0 !important;
+  margin: 35px 0 0;
 }
 
 .news-block__button:hover {
@@ -546,6 +552,7 @@ ul.uk-subnav.uk-subnav-pill {
   color: #3c3741;
   -webkit-box-shadow: none;
           box-shadow: none;
+  margin: 0 auto;
 }
 
 .footer-contacts .button:hover {
@@ -564,10 +571,54 @@ ul.uk-subnav.uk-subnav-pill {
 
 .footer-callback__block {
   text-align: center;
-  width: 300px;
-  margin: 0 auto;
+  width: 400px;
+  margin: 40px auto;
 }
 
 .footer-callback__block .uk-input, .footer-callback__block .uk-select:not([multiple]):not([size]) {
   height: 50px;
+}
+
+.footer-callback__block .button {
+  margin: 0 auto 10px;
+}
+
+.item .uk-modal-body {
+  padding: 0 30px 60px;
+}
+
+.item-cart {
+  margin-bottom: 20px;
+}
+
+.item .uk-subnav {
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+      -ms-flex: none;
+          flex: none;
+  position: relative;
+  padding-left: 0;
+  margin-right: 20px;
+}
+
+.item .uk-grid-small {
+  margin-top: 5px;
+}
+
+.item h4 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.item .advise-cart__price {
+  margin-bottom: -30px;
+  z-index: 1;
+  margin-top: 50px;
+}
+
+.item__button {
+  margin: 40px auto !important;
+  display: table;
 }

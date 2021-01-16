@@ -7,6 +7,13 @@ $(function(){
   });
   // 
 
+  // Buy title change
+  $(document).on('click', '#buy', function(){
+    let titleBuy = $(this).data('title');
+    $('#order h3').html(titleBuy);
+  });
+  // 
+
   // Item card
   $(document).on('click', '.advise-cart a', function(event){
     event.preventDefault();

@@ -25,13 +25,14 @@ ul.uk-subnav.uk-subnav-pill
   margin: 30px auto
 
 .title
-  position: absolute
   font-size: 38px
   line-height: 0.9
   font-weight: 700
   letter-spacing: -1.5px
-  margin: 0
+.title_catalog
+  position: absolute
   bottom: 25%
+  margin: 0
   &:hover
     text-decoration: underline #ffe132
 .title_left
@@ -68,6 +69,7 @@ ul.uk-subnav.uk-subnav-pill
 .title_callback
   font-weight: 700
 
+
 .button
   display: table
   height: 50px
@@ -78,7 +80,6 @@ ul.uk-subnav.uk-subnav-pill
   background: #ffe132
   padding: 0 30px !important
   box-shadow: 0 10px 40px rgba(255, 225, 50, 0.6)
-  margin: 0 auto -25px !important
   &:hover
     background: transparent
     border: 2px solid #ffe132
@@ -181,7 +182,7 @@ ul.uk-subnav.uk-subnav-pill
           text-decoration: none
           color: #ffe132
       & a.button
-        margin: 0 auto !important
+        margin: 0 auto
   &__logo
     margin-top: 40px
   & p, .news-block p
@@ -247,6 +248,8 @@ ul.uk-subnav.uk-subnav-pill
       right: 0
       background: #ffe132
       z-index: -1
+  & .button
+    margin: 0 auto -25px
 
 .advise
   &-slider
@@ -326,7 +329,7 @@ ul.uk-subnav.uk-subnav-pill
       background: transparent
       border: 2px solid #3c3741
       box-shadow: 0 10px 40px rgba(60, 55, 65, 0.6)
-      margin: 35px 0 0 !important
+      margin: 35px 0 0
       &:hover
         background: #ffe132
         border: 1px solid #ffe132
@@ -375,6 +378,7 @@ ul.uk-subnav.uk-subnav-pill
     & .button
       color: #3c3741
       box-shadow: none
+      margin: 0 auto
       &:hover
         background: transparent
         border: 2px solid #ffe132
@@ -386,22 +390,34 @@ ul.uk-subnav.uk-subnav-pill
   &-callback
     &__block
       text-align: center
-      width: 300px
-      margin: 0 auto
+      width: 400px
+      margin: 40px auto
       & .uk-input, .uk-select:not([multiple]):not([size])
         height: 50px
+      & .button
+        margin: 0 auto 10px
         
-// .item
-//   & .uk-modal-body
-//     padding: 60px
-//   & .uk-subnav
-//     flex: none
-//     position: relative
-//     padding-left: 0
-//     margin-right: 20px
-//   & .uk-grid-small
-//     margin-top: 5px
-//   h4
-//     font-weight: 700
-//     letter-spacing: -1px
-//     margin-top: 15px
+.item
+  & .uk-modal-body
+    padding: 0 30px 60px
+  &-cart
+    margin-bottom: 20px
+  & .uk-subnav
+    flex: none
+    position: relative
+    padding-left: 0
+    margin-right: 20px
+  & .uk-grid-small
+    margin-top: 5px
+  & h4
+    font-size: 24px
+    font-weight: 700
+    margin-top: 15px
+    margin-bottom: 20px
+  & .advise-cart__price
+    margin-bottom: -30px
+    z-index: 1
+    margin-top: 50px
+  &__button
+    margin: 40px auto !important
+    display: table
